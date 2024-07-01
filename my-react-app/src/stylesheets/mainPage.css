@@ -1,0 +1,11 @@
+html {
+    height: 100%; /* Ensure the html element takes up the full viewport height */
+    background-image: linear-gradient(to bottom, #0b0030, #6133be);
+}
+
+.title {
+    font-family: var(--font-family-primary);
+    color: var(--text-color);
+    font-size: 80px;
+    text-align: center;
+}

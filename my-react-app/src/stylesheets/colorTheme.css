@@ -1,0 +1,14 @@
+:root {
+    --primary-color: #dedede;
+    --secondary-color: #111111;
+    --text-color: #cacaca;
+    --font-family-primary: 'sans-serif';
+}
+
+.colorPrimary {
+    background: var(--primary-color);
+}
+
+.colorSecondary {
+    background: var(--secondary-color);
+}
