@@ -1,11 +1,61 @@
 html {
     height: 100%; /* Ensure the html element takes up the full viewport height */
-    background-image: linear-gradient(to bottom, #0b0030, #6133be);
+    background-color: var(--primary-color);
 }
+
+html, body {
+    margin: 0;
+    padding: 0;
+  }
+
+.container {
+    max-width: 1200px;
+    margin: 0 auto;
+    padding: 20px;
+  }
 
 .title {
     font-family: var(--font-family-primary);
     color: var(--text-color);
-    font-size: 80px;
+    font-size: 200px;
+    margin-bottom: -80px;
     text-align: center;
+    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
+    line-height: 1.2;
+    border-radius: 10px;
+    position: relative;
 }
+
+.image-wrapper {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+  }
+  
+  .profilePicture {
+    margin-top: -20px;
+    width: 300px;
+    height: 500px;
+    border-radius: 15px;
+    background-color: #ddd;
+  }
+
+  .section {
+    padding: 40px;
+    margin: 20px auto;
+    max-width: 1200px;
+    border-radius: 8px;
+    transition: all 0.3s ease;
+  }
+  
+  .section h2 {
+    font-size: 2em;
+    margin-bottom: 10px;
+  }
+  
+  .section p {
+    font-size: 1.2em;
+    line-height: 1.8;
+  }
+
+  

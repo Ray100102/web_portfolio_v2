@@ -1,3 +1,7 @@
 body {
     background-color: #f0f0f0; /* Replace with your chosen color */
 }
+
+html {
+    scroll-behavior: smooth;
+  }
