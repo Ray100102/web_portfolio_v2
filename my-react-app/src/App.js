@@ -38,13 +38,13 @@ function App() {
           <ul className="navbar-menu">
             
             <li className="navbar-item">
-              <a href="#home" className="navbar-link">Home</a>
+              <a href="#home" className="navbar-link">Home&nbsp;&nbsp;&nbsp;</a>
             </li>
             <li className="navbar-item">
-              <a href="#section1" className="navbar-link">About</a>
+              <a href="#section1" className="navbar-link">About&nbsp;&nbsp;&nbsp;</a>
             </li>
             <li className="navbar-item">
-              <a href="#section2" className="navbar-link">Experience</a>
+              <a href="#section2" className="navbar-link">Experience&nbsp;&nbsp;&nbsp;</a>
             </li>
             <li className="navbar-item">
               <a href="#section3" className="navbar-link">Projects</a>
@@ -53,12 +53,12 @@ function App() {
           <ul className="navbar-socials">
             <li className="navbar-item navbar-icon">
               <a href="https://www.linkedin.com/in/ray-g-903ab8200/" className="navbar-link" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-linkedin"></i>
+                <i className="fab fa-linkedin">&nbsp;&nbsp;&nbsp;</i>
               </a>
             </li>
             <li className="navbar-item navbar-icon">
               <a href="https://github.com/Ray100102" className="navbar-link" target="_blank" rel="noopener noreferrer">
-                <i className="fab fa-github"></i>
+                <i className="fab fa-github">&nbsp;&nbsp;&nbsp;</i>
               </a>
             </li>
             <li className="navbar-item navbar-icon">
@@ -116,11 +116,11 @@ function App() {
               </p>
               
               <p>
-                Alongside working on this website, I've been working on personal projects to increase my knowledge in computer science. Scroll down to check out some of those projects!
+                Including this website, I've been working on personal projects to further my skills in computer science!
               </p>
             </div>
           </section>
-          
+
         </div>
 
         <div className="fullSection">

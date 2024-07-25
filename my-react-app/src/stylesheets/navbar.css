@@ -5,7 +5,6 @@ html {
 }
 
 .navbar {
-
     position: sticky;
     top: 0;
     color: var(--text-color);
@@ -36,10 +35,6 @@ html {
     justify-content: space-between;
     margin: 0;
     padding: 0;
-  }
-  
-  .navbar-item {
-    margin-left: 20px;
   }
   
   .navbar-link {
