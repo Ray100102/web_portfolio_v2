@@ -1,0 +1,34 @@
+/* src/ScrollingBanner.css */
+
+.banner-container {
+    width: 100vw;
+    overflow: hidden;
+    background-color: var(--black-color);
+    color: var(--invert-text-color);
+    font-family: var(--font-family-primary);
+    font-weight: 1000;
+    font-size: 30px;
+    line-height: 3.0;
+    display: flex;
+    margin-top: -400px;
+    position: relative;
+  }
+  
+  .banner {
+    display: flex;
+    animation: scroll 20s linear infinite;
+  }
+  
+  .banner-item {
+    margin: 0 5rem;
+  }
+  
+  @keyframes scroll {
+    0% {
+      transform: translateX(100%);
+    }
+    100% {
+      transform: translateX(-100%);
+    }
+  }
+  

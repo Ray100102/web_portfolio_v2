@@ -1,17 +1,24 @@
 /* src/components/Navbar.css */
 html {
   scroll-behavior: smooth;
+  overflow-x: visible;
 }
 
 .navbar {
+
     position: sticky;
-    top: 0px; 
+    top: 0;
     color: var(--text-color);
     background-color: var(--primary-color);
     padding: 10px 20px;
     display: flex;
     justify-content: center;
-    border-bottom: 2px solid var(--secondary-color); /* Black line underneath the navbar */
+    transition: background-color 1s;
+    z-index: 10;
+  }
+
+  .navbar.scrolled {
+    background-color: var(--third-color);
   }
   
   .navbar-container {
@@ -20,12 +27,13 @@ html {
     max-width: 1200px;
     width: 100%;
     margin: auto;
-    justify-content: space-between;
+    width: 100%;
   }
   
   .navbar-menu {
     list-style: none;
     display: flex;
+    justify-content: space-between;
     margin: 0;
     padding: 0;
   }
@@ -37,10 +45,17 @@ html {
   .navbar-link {
     color: var(--text-color);
     text-decoration: none;
-    font-size: 18px;
+    font-size: 25px;
   }
   
   .navbar-link:hover {
     text-decoration: underline;
   }
   
+  .navbar-socials {
+    list-style: none;
+    display: flex;
+    margin: 0;
+    padding: 0;
+    margin-left: auto;
+  }

@@ -1,8 +1,12 @@
 :root {
     --primary-color: #F2EFE5;
-    --secondary-color: #B4B4B8;
+    --secondary-color: #E3E1D9;
+    --third-color:#C7C8CC;
+    --fourth-color: #B4B4B8;
+    --black-color: #010203;
     --inverted-color: #051428;
     --text-color: #010203;
+    --invert-text-color: #F2EFE5;
     --font-family-primary: 'sans-serif';
 }
 

@@ -1,38 +1,51 @@
-import React, { useState, useEffect } from 'react';
-import './carousel.css';
+// SwiperComponent.js
+import React from 'react';
+import { Swiper, SwiperSlide } from 'swiper/react';
+import 'swiper/css/bundle';
+import { EffectCoverflow, Pagination } from 'swiper/modules';
 
-const Carousel = ({ images }) => {
-  const [currentIndex, setCurrentIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 3000);
-
-    return () => clearInterval(interval);
-  }, [images.length]);
-
-  const prevImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex - 1 + images.length) % images.length);
-  };
-
-  const nextImage = () => {
-    setCurrentIndex((prevIndex) => (prevIndex + 1) % images.length);
-  };
-
+import './carousel.css'
+const SwiperComponent = () => {
   return (
-    <div className="carousel">
-      <button className="carousel-button prev" onClick={prevImage}>
-        &lt;
-      </button>
-      <div className="carousel-card">
-        <img src={images[currentIndex]} alt="carousel" className="carousel-image" />
-      </div>
-      <button className="carousel-button next" onClick={nextImage}>
-        &gt;
-      </button>
+    <div >
+    <Swiper
+      effect="coverflow"
+      grabCursor={true}
+      centeredSlides={true}
+      slidesPerView="7"
+      coverflowEffect={{
+        rotate: 50,
+        stretch: 0,
+        depth: 100,
+        modifier: 1,
+        slideShadows: true,
+      }}
+      pagination={{
+        el: ".swiper-pagination",
+        clickable: true,
+      }}
+      modules={[EffectCoverflow, Pagination]}
+      className="mySwiper"
+    >
+      <SwiperSlide>
+        <img src="https://swiperjs.com/demos/images/nature-4.jpg" alt="Nature 4" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="https://swiperjs.com/demos/images/nature-5.jpg" alt="Nature 5" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="https://swiperjs.com/demos/images/nature-6.jpg" alt="Nature 6" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="https://swiperjs.com/demos/images/nature-7.jpg" alt="Nature 7" />
+      </SwiperSlide>
+      <SwiperSlide>
+        <img src="https://swiperjs.com/demos/images/nature-8.jpg" alt="Nature 8" />
+      </SwiperSlide>
+    </Swiper>
     </div>
+    
   );
 };
 
-export default Carousel;
+export default SwiperComponent;
