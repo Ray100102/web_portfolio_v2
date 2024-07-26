@@ -2,6 +2,11 @@
 html {
     height: 100%; /* Ensure the html element takes up the full viewport height */
     background-color: var(--primary-color);
+    scroll-behavior: smooth;
+    user-select: none;
+    -webkit-user-select: none; 
+    -moz-user-select: none;
+    -ms-user-select: none;
 }
 
 html, body {
@@ -16,8 +21,17 @@ html, body {
     max-width: 1200px;
     border-radius: 8px;
     transition: all 0.3s ease;
+    min-height:800px;
+    position: relative;
+    overflow: hidden;
+    background: url('https://www.transparenttextures.com/patterns/linen.png');
+    animation: waveAnimation 20s linear infinite;
   }
 
+  @keyframes waveAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
+  }
 
 /* TITLES CSS */
 .title {
@@ -34,10 +48,6 @@ html, body {
 }
 
 .titleBackground {
-
-  top: 50%;
-  left: 50%;
-
   background-color: var(--fourth-color); /* Background color */
   border-radius: 15px; /* Rounded corners */
 
@@ -49,7 +59,6 @@ html, body {
   font-family: var(--font-family-primary);
   color: var(--text-color);
   font-size: 100px;
-  margin-bottom: -50px;
   text-align: center;
   text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
   line-height: 1.2;
@@ -125,3 +134,157 @@ html, body {
     height: 35px; 
     vertical-align: -10%;
   }
+
+/* EXPERIENCE SECTION CSS */
+
+.experience-section {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  padding: 2rem;
+}
+
+.experience-card {
+  font-family: var(--font-family-primary);
+  background: white;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transition: transform 0.3s ease, box-shadow 0.3s ease;
+  width: 100%;
+  max-width: 300px;
+  margin: 20px 0; /* Vertical spacing */
+  padding: 20px;
+  text-align: center;
+  position: relative;
+  overflow: hidden;
+  /* Hide the extra section initially */
+}
+
+.experience-card:hover {
+  transform: scale(1.05);
+  box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+}
+
+.experience-extra {
+  display: none; /* Hidden by default */
+  position: absolute;
+  left: 0;
+  width: 100%;
+  background-color: #f4f4f4; /* Pastel background color */
+  padding: 20px;
+  border-radius: 15px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  transform: translateY(-20px);
+  opacity: 0;
+  transition: transform 0.3s ease, opacity 0.3s ease;
+}
+
+.experience-card:hover .experience-extra {
+  display: block; /* Show on hover */
+  transform: translateY(0);
+  opacity: 1;
+}
+
+.experience-icon {
+  font-size: 3rem;
+  color: #333;
+  margin-bottom: 10px;
+}
+
+.experience-title {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 0.5rem;
+}
+
+.experience-description {
+  font-size: 1rem;
+  color: #666;
+  line-height: 1.5;
+}
+
+.experience-extra-content {
+  font-size: 0.9rem;
+  color: #999;
+}
+
+
+/* PROJECTS SECTION */
+.projects-grid {
+  display: grid;
+  grid-template-columns: repeat(auto-fill, minmax(250px, 1fr));
+  gap: 20px;
+  padding: 20px;
+  margin-top: 200px;
+}
+
+.project-card {
+  perspective: 1000px;
+  position: relative;
+}
+
+.card-inner {
+  position: relative;
+  width: 100%;
+  height: 100%;
+  transition: transform 0.6s;
+  transform-style: preserve-3d;
+}
+
+.project-card:hover .card-inner {
+  transform: rotateY(180deg);
+}
+
+.card-front, .card-back {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  backface-visibility: hidden;
+}
+
+.card-front {
+  background: #fff;
+  border-radius: 10px;
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+}
+
+.card-back {
+  background: #333;
+  color: #fff;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  transform: rotateY(180deg);
+  border-radius: 10px;
+  padding: 20px;
+}
+
+.project-image {
+  width: 100%;
+  height: auto;
+  border-bottom: 2px solid #ddd;
+  border-radius: 10px 10px 0 0;
+}
+
+.project-title {
+  margin: 10px 0;
+  font-size: 1.2rem;
+  color: #333;
+}
+
+.project-description {
+  font-size: 1rem;
+  color: #fff;
+}
+
+.project-link {
+  color: #ff0;
+  text-decoration: none;
+  font-weight: bold;
+}

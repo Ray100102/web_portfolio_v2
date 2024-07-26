@@ -9,6 +9,7 @@ html {
     top: 0;
     color: var(--text-color);
     background-color: var(--primary-color);
+    font-family: var(--font-family-primary);
     padding: 10px 20px;
     display: flex;
     justify-content: center;

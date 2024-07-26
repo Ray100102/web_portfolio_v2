@@ -4,7 +4,7 @@ import { Swiper, SwiperSlide } from 'swiper/react';
 import 'swiper/css/bundle';
 import { EffectCoverflow, Pagination } from 'swiper/modules';
 
-import './carousel.css'
+import '../stylesheets/carousel.css'
 const SwiperComponent = () => {
   return (
     <div className = "carouselBackground">

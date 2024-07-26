@@ -1,0 +1,38 @@
+.banner-container {
+  overflow: hidden;
+  max-width: 1200px;
+  margin: 0 auto;
+  color: #A79277;
+  font-family: var(--font-family-primary);
+  font-size: 20px;
+  line-height: 3.0;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 2;
+}
+
+.banner {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  white-space: nowrap;
+}
+
+.banner-item {
+  margin: 0 2rem;
+}
+
+.banner-content {
+  display: flex;
+  animation: scroll 100s linear infinite;
+}
+
+@keyframes scroll {
+  0% {
+    transform: translateX(0);
+  }
+  100% {
+    transform: translateX(-100%);
+  }
+}

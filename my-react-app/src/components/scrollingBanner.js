@@ -1,18 +1,31 @@
 import React from 'react';
-import './banner.css';
+import '../stylesheets/banner.css';
 
 const ScrollingBanner = () => {
   const words = [
-    'Innovation', 'Efficiency', 'Data Science', 'Enterprise', 
-    'Technology', 'Integration', 'Platforms', 'Transformation'
+    'Full-Stack', ' Innovation', 
+    'Technology', ' SWE', ' Product-Oriented', ' Driven'
+  ];
+
+  // Create a duplicated array to achieve the wrapping effect
+  const repeatedWords = [...words, ...words, ...words, ...words
+    , ...words, ...words, ...words, ...words, ...words, ...words
+    , ...words, ...words, ...words, ...words, ...words, ...words
   ];
 
   return (
     <div className="banner-container">
       <div className="banner">
-        {words.map((word, index) => (
-          <span key={index} className="banner-item">{word}</span>
-        ))}
+        <div className="banner-content">
+          {repeatedWords.map((word, index) => (
+            <span key={index} className="banner-item">{word}</span>
+          ))}
+        </div>
+        <div className="banner-content">
+          {repeatedWords.map((word, index) => (
+            <span key={index + words.length} className="banner-item">{word}</span>
+          ))}
+        </div>
       </div>
     </div>
   );
