@@ -1,0 +1,98 @@
+.experience-section {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+  }
+  
+  .experience-cards {
+    display: flex;
+    overflow-x: auto;
+    gap: 20px;
+    padding: 20px 0;
+  }
+  
+  .experience-card {
+    font-family: var(--font-family-primary);
+    background: white;
+    border-radius: 15px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.2);
+    transition: transform 0.5s ease, box-shadow 0.5s ease, height 0.5s ease;
+    width: 400px;
+    height: 250px;
+    max-width: 100%;
+    margin: 20px;
+    padding: 20px;
+    text-align: center;
+    position: relative;
+    overflow: hidden;
+  }
+  
+  .experience-card:hover {
+    transform: scale(1.05);
+    box-shadow: 0 8px 16px rgba(0, 0, 0, 0.3);
+    height: 400px;
+  }
+  
+  .experience-extra {
+    opacity: 0;
+    transform: translateY(20px) ;
+    transition: opacity .5s ease, transform 1s ease; /* Smooth transition */
+    visibility: hidden; /* Hide the element without affecting layout */
+  }
+  
+  .experience-card:hover .experience-extra {
+    opacity: 1;
+    transform: translateY(0);
+    visibility: visible; /* Make the element visible on hover */
+  }
+  
+  .skills-banner {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 10px;
+    margin-top: 10px;
+  }
+  
+  .skill {
+    background-color: #9bb6f4;
+    color: #333;
+    font-size: 0.9rem;
+    padding: 0.5rem 1rem;
+    border-radius: 20px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+  }
+  
+  .experience-icon {
+    width: 100px; /* Set fixed width */
+    height: 100px; /* Set fixed height */
+    display: flex;
+    align-items: center; /* Center vertically */
+    justify-content: center; /* Center horizontally */
+  }
+  
+  .experience-icon img {
+    width: auto; /* Maintain aspect ratio */
+    height: auto; /* Maintain aspect ratio */
+    margin-left:240px;
+    margin-top:50x;
+  }
+
+  .experience-title {
+    font-size: 1.5rem;
+    font-weight: bold;
+    margin-bottom: 0.5rem;
+  }
+  
+  .experience-description {
+    font-size: 1rem;
+    color: #666;
+    line-height: 1.5;
+  }
+  
+  .experience-extra-content {
+    font-size: 0.9rem;
+    color: #999;
+  }
+  

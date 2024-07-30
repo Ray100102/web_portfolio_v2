@@ -13,6 +13,7 @@ import ExperienceSection from './sections/experienceSection';
 import ProjectsSection from './sections/projectsSection';
 import TitleSection from './sections/titleSection';
 import NavBar from './components/navbar';
+import SmoothScroll from './components/smoothScroll';
 
 function App() {
 
@@ -34,32 +35,35 @@ function App() {
   }, []);
 
   return (
-    <div className="page">
-      <div id="home"/>
-      <NavBar/>
-      <div>
-        <div className = "section">
-          <TitleSection/>
-          <ScrollBanner/>
-        </div>
-
-        <div id="about" className="section">
-          <AboutSection/>
-        </div>
-
-        <div className="fullSection">
-          <ImageCarousel/>
-        </div>
+      <div className="page">
+        <div id="home"/>
+        <NavBar/>
         
-        <div id="experience" className="section">
-          <ExperienceSection /> 
-        </div>
+        <div>
+          <div className = "section">
+            <TitleSection/>
+            <ScrollBanner/>
+          </div>
 
-        <div id="projects" className="section">
-          <ProjectsSection/>
+          <div id="about" className="section">
+            <AboutSection/>
+          </div>
+
+          <div className="fullSection">
+            <ImageCarousel/>
+          </div>
+          
+          <div id="experience" className="section">
+            <ExperienceSection /> 
+          </div>
+
+          <div id="projects" className="section">
+            <ProjectsSection/>
+          </div>
         </div>
       </div>
-      </div>
+
+     
   );
 }
 

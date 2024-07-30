@@ -1,0 +1,133 @@
+.projects-container {
+    display: grid;
+    grid-template-rows: repeat(10, 1fr); /* 4 rows of equal height */
+    grid-template-columns: repeat(10, 1fr); /* 4 columns of equal width */
+    grid-template-areas:
+      "a a a a a b b i i i"
+      "a a a a a b b i i i"
+      "a a a a a e e i i i"
+      "g g h h h e e i i i"
+      "f f f f f f f f f f"
+      "f f f f f f f f f f"
+      "f f f f f f f f f f"
+      "f f f f f f f f f f"
+      "f f f f f f f f f f"
+      "f f f f f f f f f f";
+    gap: 10px;
+    padding: 10px;
+    box-sizing: border-box;
+    max-width: 1200px;
+    height: 1200px;
+  }
+  
+  .project-card {
+    position: relative;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    overflow: hidden;
+    background: #fff;
+    border: 2px solid; /* Define border width */
+    border-color: red; /* Initial border color */
+     animation: rainbow-border 20s linear infinite; /* Apply the animation */
+    border-radius: 15px;
+  }
+  
+  @keyframes rainbow-border {
+    0% {
+      border-color: red;
+    }
+    14% {
+      border-color: orange;
+    }
+    28% {
+      border-color: yellow;
+    }
+    42% {
+      border-color: green;
+    }
+    57% {
+      border-color: blue;
+    }
+    71% {
+      border-color: indigo;
+    }
+    85% {
+      border-color: violet;
+    }
+    100% {
+      border-color: red;
+    }
+  }
+
+  .project-front,
+  .project-back {
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    backface-visibility: hidden;
+    transition: transform 0.6s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  .project-front {
+    background-color: white;
+  }
+  
+  .project-back {
+    background-color: white;
+    transform: rotateY(180deg);
+  }
+  
+  .project-card.flipped .project-front {
+    transform: rotateY(180deg);
+  }
+  
+  .project-card.flipped .project-back {
+    transform: rotateY(0deg);
+  }
+  
+  .project-image {
+    width: 100%;
+    object-fit: cover;
+  }
+  
+  /* Map each card to its corresponding grid area */
+  .project-card.a {
+    grid-area: a;
+  }
+  
+  .project-card.b {
+    grid-area: b;
+  }
+  
+  .project-card.c {
+    grid-area: c;
+  }
+  
+  .project-card.d {
+    grid-area: d;
+  }
+  
+  .project-card.e {
+    grid-area: e;
+  }
+  
+  .project-card.f {
+    grid-area: f;
+  }
+
+  .project-card.g {
+    grid-area: g;
+  }
+
+  .project-card.h {
+    grid-area: h;
+  }
+
+  .project-card.i {
+    grid-area: i;
+  }
+  
