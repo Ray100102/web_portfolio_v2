@@ -21,7 +21,7 @@ const ProjectsSection = () => {
   };
 
   return (
-    <div className="section">
+    <div>
       <div className="subtitle">Projects</div>
       <div className="projects-container">
         {projects.map((project) => (

@@ -46,6 +46,7 @@ const SwiperComponent = () => {
           <SwiperSlide>
             <img src="https://swiperjs.com/demos/images/nature-8.jpg" alt="Nature 8" />
           </SwiperSlide>
+          
         </Swiper>
       </div>
     </div>

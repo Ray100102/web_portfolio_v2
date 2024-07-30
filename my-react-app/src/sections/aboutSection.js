@@ -1,13 +1,12 @@
 import React from 'react';
-import uwLogo from '../assets/uw.png'; // Adjust the path if necessary
-import '../stylesheets/mainPage.css'; // Import the CSS for the AboutSection
-
+import uwLogo from '../assets/uw.png';
+import '../stylesheets/about.css';
+import ScrollingBanner from '../components/scrollingBanner';
+import ImageCarousel from '../components/imageCarousel.js';
 const AboutSection = () => {
   return (
-    <div id="section1" className="section">
-      <div className="subtitle">ABOUT</div>
-      <div className="subtitle">ME</div>
-
+    <div>
+      <div className="subtitle">ABOUT ME</div>
       <section className="intro">
         <p className="intro-text">Hello!</p>
         <p className="intro-text">
@@ -16,19 +15,20 @@ const AboutSection = () => {
         </p>
         <div className="intro-details">
           <p>
-            I am driven by a passion to create products that prioritize user-friendliness. My ultimate goal is to build solutions that seamlessly integrate into users' lives, providing a smooth and intuitive experience.
+            I am driven by a passion to create products that prioritize user-friendliness.  My ultimate goal is to build solutions that seamlessly integrate into users' lives, providing a smooth and intuitive experience :)
           </p>
           <p>
-            I am skilled with programming languages like Java, Python, C++, and Swift as well as frameworks like Next.js and Node.js.
+            I'm currently looking for any SWE or PM roles within tech to further my career!
           </p>
           <p>
-            I'm currently looking for any SWE or Project Manager roles to further my career in the computer science industry!
-          </p>
-          <p>
-            Including this website, I've been working on personal projects to further my skills in computer science! Please feel free to explore the site!
+            Including this website, I've been working on personal projects to further my skills in CS. Please feel free to explore the site!
           </p>
         </div>
       </section>
+
+      <ScrollingBanner reverse={false}></ScrollingBanner>
+
+      <ImageCarousel/>
     </div>
   );
 };

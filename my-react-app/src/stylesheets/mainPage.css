@@ -1,7 +1,6 @@
 /* GLOBAL CSS */
 html {
     height: 100%; /* Ensure the html element takes up the full viewport height */
-    background-color: var(--primary-color);
     scroll-behavior: smooth;
     user-select: none;
     -webkit-user-select: none; 
@@ -10,70 +9,38 @@ html {
 }
 
 html, body {
+  background: linear-gradient(to bottom, var(--primary-color), var(--secondary-color));
     margin: 0;
     padding: 0;
     overflow-x: hidden;
   }
 
 .section {
-    padding: 40px;
     margin: 20px auto;
-    max-width: 1200px;
     border-radius: 8px;
     transition: all 0.3s ease;
-    min-height:700px;
+    min-height: 100vh;
     position: relative;
     overflow: hidden;
     background: url('https://www.transparenttextures.com/patterns/linen.png');
     animation: waveAnimation 20s linear infinite;
+    padding-top: 2rem;
   }
 
-  @keyframes waveAnimation {
-    0% { background-position: 0 0; }
-    100% { background-position: 100% 100%; }
-  }
-
-/* TITLES CSS */
-.title {
+  .subtitle {
     font-family: var(--font-family-primary);
     color: var(--text-color);
-    font-size: 200px;
-    margin-bottom: -80px;
+    font-size: 100px;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     line-height: 1.2;
     border-radius: 10px;
     position: relative;
-    animation: popUp 3s ease forwards;
 }
 
-.titleBackground {
-  background-color: var(--fourth-color); /* Background color */
-  border-radius: 15px; /* Rounded corners */
-
-  z-index: 0;
-  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-}
-
-.subtitle {
-  font-family: var(--font-family-primary);
-  color: var(--text-color);
-  font-size: 100px;
-  text-align: center;
-  text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
-  line-height: 1.2;
-  border-radius: 10px;
-  position: relative;
-  animation: popUp 3s ease forwards;
-}
-
-@keyframes popUp {
-    0% {
-      opacity: 0;
-    }
-    100% {
-      opacity: 1;
-    }
+  @keyframes waveAnimation {
+    0% { background-position: 0 0; }
+    100% { background-position: 100% 100%; }
   }
 
   /* HOME CSS */
@@ -89,48 +56,4 @@ html, body {
     height: 500px;
     border-radius: 15px;
     background-color: #ddd;
-  }
-
-  /* INTRO CSS */
-
-  .intro {
-    max-width: 800px;
-    margin: 0 auto;
-    padding: 40px 20px;
-    background: var(--secondary-color);
-    border-radius: 30px;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 5px 5px 0 #000;
-    overflow: hidden;
-    border: 2px solid #000;
-    z-index: 0;
-  }
-  
-  .intro-text {
-    font-family: var(--font-family-primary);
-    font-size: 2rem;
-    font-weight: 600;
-    color: #333;
-    margin: 0;
-    line-height: 1.4;
-    text-align: center;
-
-  }
-  
-  .intro-text + .intro-text {
-    margin-top: 10px; /* Space between paragraphs */
-  }
-  
-  .intro-details {
-    font-family: var(--font-family-primary);
-    font-size: 1.125rem;
-    color: #555;
-    line-height: 1.6;
-    text-align: center;
-    margin-top: 20px;
-  }
-
-  .uw-logo {
-    width: 35px;
-    height: 35px; 
-    vertical-align: -10%;
   }

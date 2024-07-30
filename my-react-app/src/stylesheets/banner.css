@@ -1,6 +1,6 @@
 .banner-container {
   overflow: hidden;
-  max-width: 1200px;
+  height:200px;
   margin: 0 auto;
   color: #A79277;
   font-family: var(--font-family-primary);
@@ -24,8 +24,15 @@
 }
 
 .banner-content {
+  height:100px;
   display: flex;
-  animation: scroll 100s linear infinite;
+  animation: scroll 200s linear infinite;
+}
+
+.banner-content2 {
+  height:100px;
+  display: flex;
+  animation: scroll 450s linear infinite;
 }
 
 @keyframes scroll {
@@ -34,5 +41,14 @@
   }
   100% {
     transform: translateX(-100%);
+  }
+}
+
+@keyframes scrollr {
+  0% {
+    transform: translateX(-100%);
+  }
+  100% {
+    transform: translateX(0);
   }
 }

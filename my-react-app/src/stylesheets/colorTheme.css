@@ -2,12 +2,12 @@
 
 :root {
     --primary-color: #F2EFE5;
-    --secondary-color: #E3E1D9;
+    --secondary-color: #F9D6A4;
     --third-color:#C7C8CC;
     --fourth-color: #B4B4B8;
     --black-color: #010203;
     --inverted-color: #051428;
-    --text-color: #010203;
+    --text-color: #000000;
     --invert-text-color: #F2EFE5;
     --font-family-primary: "Montserrat", sans-serif;
 }

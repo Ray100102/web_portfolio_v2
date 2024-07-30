@@ -1,15 +1,31 @@
 import React from 'react';
-import '../stylesheets/mainPage.css'; // Import the CSS for the TitleSection
+import '../stylesheets/title.css'; // Import the CSS for the TitleSection
 
 const TitleSection = () => {
   return (
     <div className="title-section">
-      <div className="titleBackground">
-        <div className="title">
-          Ray&nbsp;&nbsp;
-        </div>
-        <div className="title">
-          &nbsp;&nbsp;Guo
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <br />
+      <div className="title">
+        Ray         Guo
+      </div>
+      <div id="container">
+        <div id="flip">
+          <div>
+            <div>Full-Stack Dev</div>
+          </div>
+          <div>
+            <div>Program Manager</div>
+          </div>
+          <div>
+            <div>Software Engineer</div>
+          </div>
         </div>
       </div>
       {/* 

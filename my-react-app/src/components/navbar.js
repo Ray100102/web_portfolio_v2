@@ -25,13 +25,13 @@ const Navbar = () => {
       <div className="navbar-container">
         <ul className="navbar-menu">
           <li className="navbar-item">
-            <a href="#home" className="navbar-link">Home&nbsp;&nbsp;&nbsp;</a>
+            <a href="#home" className="navbar-link">Home</a>
           </li>
           <li className="navbar-item">
-            <a href="#about" className="navbar-link">About&nbsp;&nbsp;&nbsp;</a>
+            <a href="#about" className="navbar-link">About</a>
           </li>
           <li className="navbar-item">
-            <a href="#experience" className="navbar-link">Experience&nbsp;&nbsp;&nbsp;</a>
+            <a href="#experience" className="navbar-link">Experience</a>
           </li>
           <li className="navbar-item">
             <a href="#projects" className="navbar-link">Projects</a>
@@ -40,12 +40,12 @@ const Navbar = () => {
         <ul className="navbar-socials">
           <li className="navbar-item navbar-icon">
             <a href="https://www.linkedin.com/in/ray-g-903ab8200/" className="navbar-link" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-linkedin">&nbsp;&nbsp;&nbsp;</i>
+              <i className="fab fa-linkedin"></i>
             </a>
           </li>
           <li className="navbar-item navbar-icon">
             <a href="https://github.com/Ray100102" className="navbar-link" target="_blank" rel="noopener noreferrer">
-              <i className="fab fa-github">&nbsp;&nbsp;&nbsp;</i>
+              <i className="fab fa-github"></i>
             </a>
           </li>
           <li className="navbar-item navbar-icon">

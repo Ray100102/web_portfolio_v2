@@ -4,10 +4,7 @@ import '@fortawesome/fontawesome-free/css/all.min.css';
 import './stylesheets/colorTheme.css';
 import './stylesheets/mainPage.css';
 import './stylesheets/navbar.css';
-import uwLogo from './assets/uw.png';
-import pfp from './assets/temp_pfp.jpg';
 import ImageCarousel from './components/imageCarousel.js';
-import ScrollBanner from './components/scrollingBanner.js';
 import AboutSection from './sections/aboutSection';
 import ExperienceSection from './sections/experienceSection';
 import ProjectsSection from './sections/projectsSection';
@@ -42,15 +39,11 @@ function App() {
         <div>
           <div className = "section">
             <TitleSection/>
-            <ScrollBanner/>
+            {/*<ScrollBanner/>*/}
           </div>
 
           <div id="about" className="section">
             <AboutSection/>
-          </div>
-
-          <div className="fullSection">
-            <ImageCarousel/>
           </div>
           
           <div id="experience" className="section">
