@@ -1,80 +1,89 @@
-/* src/components/Navbar.css */
 html {
   scroll-behavior: smooth;
   overflow-x: visible;
 }
 
 .navbar {
-    position: sticky;
-    top: 0;
-    color: var(--text-color);
-    font-family: var(--font-family-primary);
-    padding: 10px 20px;
-    display: flex;
-    justify-content: center;
-    transition: background-color 1s;
-    z-index: 10;
-  }
+  position: sticky;
+  top: 0;
+  color: var(--text-color);
+  font-family: var(--font-family-primary);
+  padding: 10px 20px;
+  display: flex;
+  justify-content: center;
+  z-index: 10;
+  opacity: 0; /* Start with navbar hidden */
+  transform: translateY(-20px); /* Slide up effect */
+  animation: fadeInSlideDown 5s ease forwards; /* Add animation */
+}
 
-  .navbar.scrolled {
+.navbar-container {
+  display: flex;
+  align-items: center;
+  max-width: 1800px;
+  width: 100%;
+  margin: auto;
+}
 
-  }
-  
-  .navbar-container {
-    display: flex;
-    align-items: center;
-    max-width: 1800px;
-    width: 100%;
-    margin: auto;
-    width: 100%;
-  }
-  
-  .navbar-menu {
-    list-style: none;
-    display: flex;
-    justify-content: space-between;
-    margin: 0;
-    padding: 0;
-  }
-  
-  .navbar-item {
-    margin-right: 10px;
-  }
+.navbar-menu {
+  list-style: none;
+  display: flex;
+  justify-content: space-between;
+  margin: 0;
+  padding: 0;
+}
 
-  .navbar-link {
-    color: var(--text-color);
-    text-decoration: none;
-    font-size: 25px;
-    position: relative;
-    display: inline-block;
-    padding: 5px 10px;
-    transition: all 0.3s ease;
-  }
-  
-  .navbar-link::before {
-    content: '';
-    position: absolute;
-    top: 50%;
-    left: 50%;
-    width: 0;
-    height: 0;
-    background: #e5dcd7; /* Change this to your preferred background color */
-    border-radius: 10px;
-    transition: all 0.3s ease;
-    z-index: -1;
-  }
+.navbar-item {
+  margin-right: 10px;
+}
 
-  .navbar-link:hover::before {
-    width: 100%;
-    height: 100%;
-    top: 0;
-    left: 0;
+.navbar-link {
+  color: var(--text-color);
+  text-decoration: none;
+  font-size: 25px;
+  position: relative;
+  display: inline-block;
+  padding: 5px 10px;
+  transition: all 0.3s ease;
+}
+
+.navbar-link::before {
+  content: '';
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  width: 0;
+  height: 0;
+  background: transparent; /* Start with transparent background */
+  border-radius: 10px;
+  transition: all 0.3s ease;
+  z-index: -1;
+}
+
+.navbar-link:hover::before {
+  width: 100%;
+  height: 100%;
+  top: 0;
+  left: 0;
+  background: #e5dcd7; /* Change to desired color on hover */
+}
+
+.navbar-socials {
+  list-style: none;
+  display: flex;
+  margin: 0;
+  padding: 0;
+  margin-left: auto;
+}
+
+/* Animation keyframes */
+@keyframes fadeInSlideDown {
+  0% {
+    transform: translateY(-20px);
+    opacity: 0;
   }
-  
-  .navbar-socials {
-    list-style: none;
-    display: flex;
-    margin: 0;
-    padding: 0;
-    margin-left: auto;
+  100% {
+    opacity: 1;
+    transform: translateY(0);
   }
+}

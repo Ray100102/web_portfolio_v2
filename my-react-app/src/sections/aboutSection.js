@@ -25,9 +25,16 @@ const AboutSection = () => {
           </p>
         </div>
       </section>
-
+      <br/>
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <ScrollingBanner reverse={false}></ScrollingBanner>
-
+      <br/>
+      <br/>
+      <br/>
+      <br/>
       <ImageCarousel/>
     </div>
   );

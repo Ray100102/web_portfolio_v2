@@ -21,25 +21,25 @@ const ProjectsSection = () => {
   };
 
   return (
-    <div>
+    <div className = "parent-container">
       <div className="subtitle">Projects</div>
-      <div className="projects-container">
-        {projects.map((project) => (
-          <div
-            key={project.id}
-            className={`project-card ${project.area} ${flippedCard === project.id ? 'flipped' : ''}`}
-            onClick={() => handleCardClick(project.id)}
-          >
-            <div className="project-front">
-              <img src={project.imgSrc} alt={project.title} className="project-image" />
+        <div className="projects-container">
+          {projects.map((project) => (
+            <div
+              key={project.id}
+              className={`project-card ${project.area} ${flippedCard === project.id ? 'flipped' : ''}`}
+              onClick={() => handleCardClick(project.id)}
+            >
+              <div className="project-front">
+                <img src={project.imgSrc} alt={project.title} className="project-image" />
+              </div>
+              <div className="project-back">
+                <h2 className="project-title">{project.title}</h2>
+                <p className="project-description">{project.description}</p>
+              </div>
             </div>
-            <div className="project-back">
-              <h2 className="project-title">{project.title}</h2>
-              <p className="project-description">{project.description}</p>
-            </div>
-          </div>
-        ))}
-      </div>
+          ))}
+        </div>
     </div>
   );
 };

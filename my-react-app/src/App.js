@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useRef } from 'react';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 
 import './stylesheets/colorTheme.css';
@@ -10,53 +10,42 @@ import ExperienceSection from './sections/experienceSection';
 import ProjectsSection from './sections/projectsSection';
 import TitleSection from './sections/titleSection';
 import NavBar from './components/navbar';
-import SmoothScroll from './components/smoothScroll';
+import useIntersectionObserver from './hooks/useIntersectionObserver'; // Import the custom hook
 
 function App() {
+  const titleRef = useRef(null);
+  const aboutRef = useRef(null);
+  const experienceRef = useRef(null);
+  const projectsRef = useRef(null);
 
-  const [scrolled, setScrolled] = useState(false);
-
-  const handleScroll = () => {
-    if (window.scrollY > 0) {
-      setScrolled(true);
-    } else {
-      setScrolled(false);
-    }
-  };
-
-  useEffect(() => {
-    window.addEventListener('scroll', handleScroll);
-    return () => {
-      window.removeEventListener('scroll', handleScroll);
-    };
-  }, []);
+  const isTitleVisible = useIntersectionObserver(titleRef, { threshold: 0.1 });
+  const isAboutVisible = useIntersectionObserver(aboutRef, { threshold: .1});
+  const isExperienceVisible = useIntersectionObserver(experienceRef, { threshold: 0.1});
+  const isProjectsVisible = useIntersectionObserver(projectsRef, { threshold: 0.1 });
 
   return (
-      <div className="page">
-        <div id="home"/>
-        <NavBar/>
+    <div className="page">
+      <div id="home"/>
+      <NavBar/>
+      
+      <div>
+        <div ref={titleRef} className={`section ${isTitleVisible ? 'animate' : ''}`}>
+          <TitleSection/>
+        </div>
+
+        <div id="about" ref={aboutRef} className={`section ${isAboutVisible ? 'animate' : ''}`}>
+          <AboutSection/>
+        </div>
         
-        <div>
-          <div className = "section">
-            <TitleSection/>
-            {/*<ScrollBanner/>*/}
-          </div>
+        <div id="experience" ref={experienceRef} className={`section ${isExperienceVisible ? 'animate' : ''}`}>
+          <ExperienceSection /> 
+        </div>
 
-          <div id="about" className="section">
-            <AboutSection/>
-          </div>
-          
-          <div id="experience" className="section">
-            <ExperienceSection /> 
-          </div>
-
-          <div id="projects" className="section">
-            <ProjectsSection/>
-          </div>
+        <div id="projects" ref={projectsRef} className={`section ${isProjectsVisible ? 'animate' : ''}`}>
+          <ProjectsSection/>
         </div>
       </div>
-
-     
+    </div>
   );
 }
 

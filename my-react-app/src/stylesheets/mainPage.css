@@ -23,19 +23,27 @@ html, body {
     position: relative;
     overflow: hidden;
     background: url('https://www.transparenttextures.com/patterns/linen.png');
-    animation: waveAnimation 20s linear infinite;
+    opacity: 0;
+    transform: translateY(20px);
+    transition: opacity 1s ease-out, transform 1s ease-out;
     padding-top: 2rem;
+  }
+
+  .section.animate {
+    opacity: 1;
+    transform: translateY(0);
   }
 
   .subtitle {
     font-family: var(--font-family-primary);
     color: var(--text-color);
-    font-size: 100px;
+    font-size: 80px;
     text-align: center;
     text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.2);
     line-height: 1.2;
     border-radius: 10px;
     position: relative;
+    margin-bottom: 20px;
 }
 
   @keyframes waveAnimation {

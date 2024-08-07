@@ -21,11 +21,10 @@
     margin: 0;
     line-height: 1.4;
     text-align: center;
-
   }
   
   .intro-text + .intro-text {
-    margin-top: 10px; /* Space between paragraphs */
+    margin-top: 10px;
   }
   
   .intro-details {
