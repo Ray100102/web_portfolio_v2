@@ -74,7 +74,7 @@ function App() {
           <ProjectsSection />
         </div>
 
-        <div id="contact" ref={contactRef} className={`section ${contactAnimated ? 'animate' : ''}`}>
+        <div id="contact" ref={contactRef} className={`section end ${contactAnimated ? 'animate' : ''}`}>
           <ContactSection />
         </div>
       </div>

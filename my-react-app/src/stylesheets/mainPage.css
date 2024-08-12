@@ -29,6 +29,10 @@ html, body {
     padding-top: 2rem;
   }
 
+  .section.end {
+    min-height: 30vh;
+  }
+
   .section.animate {
     opacity: 1;
     transform: translateY(0);
