@@ -1,10 +1,12 @@
-import React, { useState, useEffect } from 'react';
+import React, { useContext } from 'react';
+import { DarkModeContext } from './darkModeContext';
 import '@fortawesome/fontawesome-free/css/all.min.css';
 import '../stylesheets/navbar.css'; // Import the CSS for the Navbar
 
 const Navbar = () => {
-  const [scrolled, setScrolled] = useState(false);
-  const [isDarkMode, setIsDarkMode] = useState(false);
+  const { isDarkMode, toggleColorMode } = useContext(DarkModeContext);
+
+  const [scrolled, setScrolled] = React.useState(false);
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -14,12 +16,7 @@ const Navbar = () => {
     }
   };
 
-  const toggleColorMode = () => {
-    setIsDarkMode(!isDarkMode);
-    document.body.classList.toggle('dark-mode');
-  };
-
-  useEffect(() => {
+  React.useEffect(() => {
     window.addEventListener('scroll', handleScroll);
     return () => {
       window.removeEventListener('scroll', handleScroll);

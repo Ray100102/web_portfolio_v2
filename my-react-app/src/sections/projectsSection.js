@@ -31,7 +31,7 @@ const projects = [
     imgSrc: og,
     siteLink: 'https://ray100102.github.io/web_portfolio/',
     githubLink: 'https://github.com/Ray100102/web_portfolio',
-    skills: ['HTML', 'CSS', 'JS'],
+    skills: ['CSS', 'HTML'],
   },
 ];
 
