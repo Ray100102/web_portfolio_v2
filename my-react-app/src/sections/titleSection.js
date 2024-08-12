@@ -18,13 +18,13 @@ const TitleSection = () => {
       <div id="container">
         <div id="flip">
           <div>
-            <div>Full-Stack Dev</div>
+            <div>Full-Stack SWE</div>
           </div>
           <div>
-            <div>Program Manager</div>
+            <div>Tech Enthusiast</div>
           </div>
           <div>
-            <div>Software Engineer</div>
+            <div>Future Ready</div>
           </div>
         </div>
       </div>

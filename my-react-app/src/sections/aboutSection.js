@@ -6,6 +6,7 @@ import ImageCarousel from '../components/imageCarousel.js';
 const AboutSection = () => {
   return (
     <div>
+      <br></br>
       <div className="subtitle">ABOUT ME</div>
       <section className="intro">
         <p className="intro-text">Hello!</p>
@@ -26,16 +27,12 @@ const AboutSection = () => {
         </div>
       </section>
       <br/>
-      <br/>
-      <br/>
-      <br/>
-      <br/>
       <ScrollingBanner reverse={false}></ScrollingBanner>
       <br/>
       <br/>
       <br/>
       <br/>
-      <ImageCarousel/>
+      {/*<ImageCarousel/>*/}
     </div>
   );
 };

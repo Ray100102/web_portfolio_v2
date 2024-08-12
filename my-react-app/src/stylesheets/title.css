@@ -3,17 +3,16 @@
     color: transparent;
     font-size: 150px;
     text-align: center;
-    text-shadow: 2px 2px 4px rgba(0, 0, 0, 0.5); /* Adjust text-shadow for better visibility */
     line-height: 1.2;
     border-radius: 10px;
     position: relative;
     background-image: url(https://media1.giphy.com/media/v1.Y2lkPTc5MGI3NjExYWswZ29pMGNtOGdvb2lucTQ2ejZiNDJmejFwOGRuZ2pzZmhubXE1ciZlcD12MV9pbnRlcm5hbF9naWZfYnlfaWQmY3Q9Zw/lKaeQAunM3hZaqsOpj/giphy.webp);
     background-size: cover;
+    background-position: center;
     -moz-background-clip: text;
     -webkit-background-clip: text;
     text-transform: uppercase;
-    animation: fadeIn 5s ease forwards, backgroundScroll 10s linear infinite;
-    background-position: 0 0;
+    animation: fadeIn 5s ease forwards;
 }
 
 @keyframes fadeIn {
@@ -36,13 +35,6 @@
     }
 }
 
-.titleBackground {
-    background-color: var(--fourth-color); /* Background color */
-    border-radius: 15px; /* Rounded corners */
-    z-index: 0;
-    box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1); /* Light shadow for depth */
-}
-
 #container {
     text-transform: uppercase;
     font-size: 30px;
@@ -51,11 +43,12 @@
     align-items: center;
     justify-content: center;
     text-align: center;
+    color: var(--text-color);
     font-family: var(--font-family-primary);
     position: relative;
     margin-top: -15px;
-    transform: scale(0); /* Start with the element scaled down */
-    opacity: 0; /* Start with hidden */
+    transform: scale(0);
+    opacity: 0;
     animation: loadInsideOut 2.5s ease forwards 1.5s;
 }
 
@@ -79,7 +72,6 @@
     content: '';
     width: 150px;
     height: 2px; 
-    background-color: black; 
 }
 
 #container::before {
@@ -98,7 +90,6 @@
 }
 
 #flip > div > div {
-    color: black;
     height: 45px;
     width: 380px;
     margin-bottom: 45px;

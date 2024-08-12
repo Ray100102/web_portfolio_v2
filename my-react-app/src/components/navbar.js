@@ -4,6 +4,7 @@ import '../stylesheets/navbar.css'; // Import the CSS for the Navbar
 
 const Navbar = () => {
   const [scrolled, setScrolled] = useState(false);
+  const [isDarkMode, setIsDarkMode] = useState(false);
 
   const handleScroll = () => {
     if (window.scrollY > 0) {
@@ -11,6 +12,11 @@ const Navbar = () => {
     } else {
       setScrolled(false);
     }
+  };
+
+  const toggleColorMode = () => {
+    setIsDarkMode(!isDarkMode);
+    document.body.classList.toggle('dark-mode');
   };
 
   useEffect(() => {
@@ -38,6 +44,11 @@ const Navbar = () => {
           </li>
         </ul>
         <ul className="navbar-socials">
+          <li className="navbar-item navbar-icon">
+            <div onClick={toggleColorMode} className="navbar-link color-mode-toggle">
+              <i className={`fas ${isDarkMode ? 'fa-sun' : 'fa-moon'}`}></i>
+            </div>
+          </li>
           <li className="navbar-item navbar-icon">
             <a href="https://www.linkedin.com/in/ray-g-903ab8200/" className="navbar-link" target="_blank" rel="noopener noreferrer">
               <i className="fab fa-linkedin"></i>

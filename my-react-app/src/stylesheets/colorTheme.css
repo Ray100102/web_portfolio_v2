@@ -11,6 +11,16 @@
     --invert-text-color: #F2EFE5;
     --font-family-primary: "Montserrat", sans-serif;
 }
+body.dark-mode {
+    --primary-color: #000000;
+    --secondary-color: #7f7f7f;
+    --third-color: #C7C8CC;
+    --fourth-color: #B4B4B8;
+    --black-color: #ffffff;
+    --text-color: #F2EFE5;
+    --invert-text-color: #F2EFE5;
+    --font-family-primary: "Montserrat", sans-serif;
+}
 
 .colorPrimary {
     background: var(--primary-color);
