@@ -19,7 +19,7 @@ const AboutSection = () => {
             I am driven by a passion to create products that prioritize user-friendliness.  My ultimate goal is to build solutions that seamlessly integrate into users' lives, providing a smooth and intuitive experience :)
           </p>
           <p>
-            I'm currently looking for any SWE or PM roles within tech to further my career!
+            I'm currently looking for any CS Developer roles within tech to further my career!
           </p>
           <p>
             Including this website, I've been working on personal projects to further my skills in CS. Please feel free to explore the site!

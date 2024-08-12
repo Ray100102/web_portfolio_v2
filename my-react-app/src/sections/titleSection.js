@@ -18,7 +18,7 @@ const TitleSection = () => {
       <div id="container">
         <div id="flip">
           <div>
-            <div>Full-Stack SWE</div>
+            <div>Full-Stack</div>
           </div>
           <div>
             <div>Tech Enthusiast</div>

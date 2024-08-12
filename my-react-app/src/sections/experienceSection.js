@@ -10,24 +10,22 @@ const ExperienceSection = () => {
       title: 'Simsola.ai',
       description: 'SWE Intern',
       extraDescription: [
-        'Interned at Simsola.ai, a startup focused on AI-driven career coaching solutions.',
-        'Integrated a custom-trained LLM into the platform, alongside implementing features such as real-time messaging, user authentication, and data synchronization using Node.js.',
-        'Designed and implemented a scalable Google Firebase architecture for efficient storage of messaging, user, and coaching data.',
-        'Collaborated in a Scrum Agile environment',
+        'Interned at Simsola.ai, a startup focused on AI-driven career coaching solutions',
+        'Integrated a custom-trained LLM into the web-app platform, alongside implementing features such as real-time messaging, user authentication, and data synchronization using Node.js',
+        'Designed and implemented a scalable Google Firebase architecture for efficient storage of messaging, user, and coaching data',
+        'Collaborated in a Scrum Agile environment with industry veterans',
       ],
-      skills: ['Node.js', 'TypeScript', 'Scrum/Agile'],
+      skills: ['Node.js', 'TypeScript', 'React', 'Scrum/Agile', 'Git'],
     },
     {
       icon: uiPath,
       title: 'UIPath',
       description: 'High School Intern',
-      extraDescription: [
-        'Worked with RPA and Git tools.',
-        'Learned about automation pipelines.',
-        'Worked with UiPath to automate workflows.',
-        'Gained insight into industry standards and best practices.'
+      extraDescription: [ 'Worked with RPA and Git tools, gaining insight into automation pipelines, industry standards, and best practices.', 
+        'Collaborated with team members on automating workflows using UiPath, enhancing problem-solving skills through hands-on projects.', 
+        'Engaged in continuous learning to stay updated on emerging technologies, contributing to documentation and participating in code reviews to ensure quality and consistency.' 
       ],
-      skills: ['Scrum/Agile', 'RPA', 'Git'],
+      skills: ['RPA', 'Scrum/Agile', 'Git'],
     },
   ];
 
@@ -48,7 +46,7 @@ const ExperienceSection = () => {
                   <div  className="extra-description "key={itemIndex}>{item}</div>
                 ))}
               </div>
-              <div className="skills-banner">
+              <div className="experience-skills">
                 {exp.skills.map((skill, skillIndex) => (
                   <span className="skill" key={skillIndex}>{skill}</span>
                 ))}

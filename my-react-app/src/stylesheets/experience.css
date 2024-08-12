@@ -11,15 +11,17 @@
   flex-direction: column;
   gap: 30px;
   width: 100%;
-  max-width: 1000px;
+  max-width: 800px;
 }
 
 .experience-card {
   display: flex;
   flex-direction: row;
-  background: var(--secondary-color);
+  background-color: var(--fill-color);
   border-radius: 15px;
-  box-shadow: 0 6px 12px rgba(0, 0, 0, 0.15);
+  box-shadow: 0 10px 20px rgba(0, 0, 0, 0.1), 5px 5px 0 #000;
+  overflow: hidden;
+  border: 2px solid #000;
   transition: transform 0.3s ease, box-shadow 0.3s ease;
   overflow: hidden;
   padding: 20px;
@@ -47,34 +49,36 @@
 }
 
 .experience-title {
+  color: var(--text-color);
   font-size: 1.75rem;
   font-weight: bold;
 }
 
 .experience-description {
-  font-size: 1.25rem;
-  color: #555;
+  font-size: var(--content-text-size);
+  color: var(--text-color);
   margin: 10px 0;
 }
 
 .extra-description {
-  font-size: 1rem;
+  font-size: var(--content-text-size);
   margin: 10px 0;
   padding-left: 20px;
-  border-left: 3px solid #ddd; /* Adds a subtle divider */
-  line-height: 1.6;
+  border-left: 3px solid var(--text-color);
+  line-height: 1.2;
+  color: var(--text-color-content)
 }
 
-.skills-banner {
+.experience-skills {
   display: flex;
   flex-wrap: wrap;
   gap: 10px;
 }
 
 .skill {
-  background-color: #9bb6f4;
-  color: #333;
-  font-size: 1rem;
+  background-color: var(--highlight-color);
+  color: var(--text-color);
+  font-size: var(--content-text-size);
   padding: 0.5rem 1rem;
   border-radius: 20px;
   box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
