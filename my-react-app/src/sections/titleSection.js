@@ -28,6 +28,7 @@ const TitleSection = () => {
           </div>
         </div>
       </div>
+      <div className = "warn">⚠️Site is still under construction (not mobile ready) 😎⚠️</div>
       {/* 
       <div className="image-wrapper">
         <img src={pfp} className="profilePicture" />

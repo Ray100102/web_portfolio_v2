@@ -4,13 +4,24 @@
     max-width: 800px;
   }
   
+  .sub {
+    font-family: var(--font-family-primary);
+    color: var(--text-color);
+    font-size: 20px;
+    text-align: center;
+    line-height: 1.2;
+    border-radius: 10px;
+    position: relative;
+    margin-bottom: 20px;
+  }
+
   .form-group {
     margin-bottom: 15px;
   }
   
   .form-group label {
     display: block;
-    font-weight: 600;
+    font-weight: 500;
     margin-bottom: 5px;
     color: var(--text-color);
   }
@@ -39,6 +50,7 @@
   }
   
   button[type="submit"] {
+    font-family: var(--font-family-primary);
     display: inline-block;
     align-items: center;
     padding: 12px;
@@ -47,7 +59,7 @@
     border: none;
     border-radius: 10px;
     font-size: 18px;
-    font-weight: 200;
+    font-weight: 500;
     cursor: pointer;
     transition: background-color 0.3s ease;
   }

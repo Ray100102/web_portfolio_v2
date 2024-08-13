@@ -15,6 +15,22 @@
     animation: fadeIn 5s ease forwards;
 }
 
+.warn {
+    font-family: var(--font-family-primary);
+    font-size: 15px;
+    color: rgb(255, 132, 0);
+    text-align: center;
+    line-height: 1.2;
+    border-radius: 10px;
+    position: relative;
+    background-size: cover;
+    background-position: center;
+    -moz-background-clip: text;
+    -webkit-background-clip: text;
+    text-transform: uppercase;
+    animation: fadeIn 5s ease forwards;
+}
+
 @keyframes fadeIn {
     0% {
         opacity: 0;

@@ -20,18 +20,16 @@ const ContactMe = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    // EmailJS service ID, template ID, and user ID
+    // I should use env here but uh O_O
     const serviceID = 'service_9lqgrki';
     const templateID = 'template_z4y3ff8';
     const userID = 'Vh3Wba2jot7y220lo';
 
     emailjs.send(serviceID, templateID, formData, userID)
       .then((response) => {
-        console.log('Email sent successfully!', response.status, response.text);
-        alert('Message sent successfully!');
+        alert('Thank you for the message!');
       })
       .catch((err) => {
-        console.error('Failed to send email:', err);
         alert('Failed to send message. Please try again later.');
       });
 
@@ -41,27 +39,26 @@ const ContactMe = () => {
   return (
     <div>
       <div className="subtitle">Contact Me</div>
+      <div className="sub">General tips / bugs / improvements to the website are also appreciated!</div>
       <form className="contact-me" onSubmit={handleSubmit}>
         <div className="form-group">
-          <label htmlFor="name">Name:</label>
+          <label htmlFor="name">Name (Optional):</label>
           <input
             type="text"
             id="name"
             name="name"
             value={formData.name}
             onChange={handleChange}
-            required
           />
         </div>
         <div className="form-group">
-          <label htmlFor="email">Email:</label>
+          <label>Email (Optional):</label>
           <input
             type="email"
             id="email"
             name="email"
             value={formData.email}
             onChange={handleChange}
-            required
           />
         </div>
         <div className="form-group">
