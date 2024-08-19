@@ -15,7 +15,7 @@ const TitleSection = () => {
       <div className="title">
         Ray         Guo
       </div>
-      <div id="container">
+      {/*       <div id="container">
         <div id="flip">
           <div>
             <div>Full-Stack</div>
@@ -27,7 +27,8 @@ const TitleSection = () => {
             <div>Future Ready</div>
           </div>
         </div>
-      </div>
+      </div> */}
+
       <div className = "warn">⚠️Site is still under construction (not mobile ready) 😎⚠️</div>
       {/* 
       <div className="image-wrapper">
